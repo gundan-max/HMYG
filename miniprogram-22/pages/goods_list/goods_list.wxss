@@ -1,0 +1,32 @@
+/* pages/goods_list/index.wxss */
+.zero_nav {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+ .zero_nav .zero_left {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+}
+ .zero_nav .zero_left image {
+  width: 70%;
+}
+ .zero_nav .zero_right {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.zero_right .goods_name{
+  overflow: hidden;
+  font-size: 28rpx;
+}
+
+.zero_right .goods_price{
+  color: red;
+  font-size: 32rpx;
+}
+
+

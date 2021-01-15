@@ -1,0 +1,6 @@
+{
+  "usingComponents": { 
+    "my-search":"/components/my-search/my-search",
+    "Tabs": "/components/Tabs/Tabs"
+  }
+}

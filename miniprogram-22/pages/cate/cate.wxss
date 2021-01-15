@@ -1,0 +1,73 @@
+/* pages/cate/cate.wxss *//* 容器盒子 */
+.cate-box{
+  position: relative;
+  padding-top: 100rpx;
+  width: 100%;
+  height:  calc( 100vh - 100rpx);
+}
+/* 左侧滚动视图区域 */
+.left-scroll{
+  float: left;
+   height:  calc( 100vh - 100rpx);
+   width:182rpx;
+   text-align:center;
+}
+/* 左侧滚动视图区域里的盒子 */
+.left-scroll view{
+     width: 100%;
+     height: 120rpx;
+     line-height:120rpx ;
+     font-size: 22rpx;
+     color: #000;
+     background-color: #f7f7f7;
+}
+/* 左侧滚动视图区域里的盒子被选中时的样式 */
+.left-scroll .active {
+  position: relative;
+   background-color: #fff;
+}
+.left-scroll .active:after{
+   position: absolute;
+   left: 0;
+   top: 30rpx;
+   display: block;
+   content: "";
+   width: 6rpx;
+   height: 60rpx;
+   background-color: rgb(192,0,0);
+}
+/* 右侧滚动视图区域 */
+.right-scroll{
+  float: left;
+  height:calc( 100vh - 100rpx);
+  width:calc( 100% - 182rpx);
+  text-align:center;
+} 
+/*商品分类标题*/
+.goods-title{
+  font-size: 24rpx;
+  width: 100%;
+  height: 24rpx;
+    font-weight: bold;
+    text-align: center;
+    margin: 30rpx 0;
+}
+/* 商品分类列表 */
+.goods-list{
+   overflow: hidden;
+}
+.goods-list .goods {
+  float: left;
+  width: 33.33%;
+  margin-bottom: 20rpx;
+  font-size:22rpx;
+}
+.goods-list .goods .goods-img{
+  width: 120rpx;
+  height: 120rpx;
+}
+.goods-list .goods .goods-name{
+   width: 100%;
+   height: 22rpx;
+   line-height: 22rpx;
+}

@@ -1,0 +1,36 @@
+<!--pages/cate/cate.wxml-->
+<view class="cate-box">
+    <!-- 顶部搜索按钮组件 -->
+    <my-search></my-search>
+    <!--左侧滚动窗口 -->
+    <scroll-view class="left-scroll"  scroll-y="true">
+        <!-- 遍历所有数据并展示 -->
+        <block wx:for="{{scrollAllData}}" wx:for-item="item" wx:key="index">
+            <view   data-index="{{index}}" bindtap="handleCateClick" class="{{activedIndex==index?'active':''}}">
+                {{item.cat_name}}
+            </view>
+        </block>
+    </scroll-view>
+    <scroll-view class="right-scroll" scroll-y="true" scroll-top="{{scrollTop}}">
+        <block wx:for="{{scrollActivedData}}" wx:key="*this">
+            <!--商品分类标题-->
+            <view class="goods-title">
+                /{{item.cat_name}}/
+            </view>
+            <!-- 商品分类列表 -->
+            <view class="goods-list">
+                <block wx:for="{{item.children}}" wx:key="*this" wx:for-item="item1"  >
+                    <navigator url="../goods_list/goods_list?cid={{item1.cat_id}}"  class="goods"> 
+                           <!-- 商品图片 -->
+                           <image class="goods-img" src="{{item1.cat_icon}}"></image>
+                           <!--商品名称 -->
+                           <view class="goods-name">
+                                 {{item1.cat_name}}
+                           </view>
+                    </navigator>
+                </block>
+
+            </view>
+        </block>
+    </scroll-view>
+</view>

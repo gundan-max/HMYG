@@ -1,0 +1,11 @@
+<!--components/my-search/my-serch.wxml-->
+   <!-- 顶部搜索栏 -->
+      <navigator class="search-box" url="">
+             <!-- 搜索框按钮 -->
+            <button class="search-button">
+               <!-- 搜索图标-->
+             <icon class="search-icon" type="search" color="#333333" size="14"></icon>
+             搜索
+            </button>
+    </navigator>
+ 
